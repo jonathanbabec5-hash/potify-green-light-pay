@@ -16,7 +16,7 @@ Complete the sample basket. Open http://127.0.0.1:8000/GreenLight_Pay_Consumer_D
 
 ### Developer entry points
 
-The consumer demo posts balanced fictional journal entries. A separate wallet reader shows balances. The Next.js reference illustrates provider boundaries. Explore `nextjs-reference/`, `tests/` in the full tree.
+The consumer demo posts balanced fictional journal entries. A separate wallet reader shows balances. The Next.js reference illustrates provider boundaries. Explore `nextjs-reference/`, `reference/`, `tests/` in the full tree.
 
 ### Verification
 
@@ -30,7 +30,7 @@ node tests/embed.test.cjs
 
 ### Release scope
 
-Production funding, provider approval, custody, conversion and settlement remain unverified. GLP has separate finances and governance. GreenLight_Pay_Consumer_Starter.zip, November 24. Includes the AmountPad component from the original archive and the distinct simulated consumer and read-only wallet paths. The nested Next.js project is an engineering reference.
+Production funding, provider approval, custody, conversion and settlement remain unverified. GLP has separate finances and governance. GreenLight_Pay_Consumer_Starter.zip, November 24. Includes the AmountPad component from the original archive and the distinct simulated consumer and read-only wallet paths. The nested Next.js project is an engineering reference. Main website public-facing GLP integration screen recovered from potify-website at b40b28683e548a04619f1e018814dd91aec1256d. July reference server is a separate non-canonical historical project.
 
 [Technical whitepaper](docs/WHITEPAPER.md) · [Marketing and sales plan](docs/MARKETING.md) · [Dated developer log](docs/BUILD-LOG.md)
 

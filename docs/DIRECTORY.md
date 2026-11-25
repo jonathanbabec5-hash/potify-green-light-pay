@@ -30,6 +30,9 @@ potify-green-light-pay/
 │   ├── postcss.config.mjs
 │   ├── tailwind.config.ts
 │   └── tsconfig.json
+├── reference/
+│   └── main-website/
+│       └── green-light-pay.tsx
 ├── tests/
 │   ├── demo.test.cjs
 │   ├── embed.test.cjs

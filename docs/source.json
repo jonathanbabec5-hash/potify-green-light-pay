@@ -1,7 +1,7 @@
 {
   "project": "Green Light Pay Consumer",
   "kind": "Working sandbox and reference source",
-  "source": "GreenLight_Pay_Consumer_Starter.zip, November 24. Includes the AmountPad component from the original archive and the distinct simulated consumer and read-only wallet paths. The nested Next.js project is an engineering reference.",
+  "source": "GreenLight_Pay_Consumer_Starter.zip, November 24. Includes the AmountPad component from the original archive and the distinct simulated consumer and read-only wallet paths. The nested Next.js project is an engineering reference. Main website public-facing GLP integration screen recovered from potify-website at b40b28683e548a04619f1e018814dd91aec1256d. July reference server is a separate non-canonical historical project.",
   "scope": "Production funding, provider approval, custody, conversion and settlement remain unverified. GLP has separate finances and governance.",
   "prepared": "2026-11-25"
 }

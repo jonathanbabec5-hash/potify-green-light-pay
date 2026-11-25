@@ -2,7 +2,7 @@
 
 **Question.** Let a shopper try a keypad, send to a handle and buy a sample item in one flow.
 
-**Source and change.** GreenLight_Pay_Consumer_Starter.zip, November 24. Includes the AmountPad component from the original archive and the distinct simulated consumer and read-only wallet paths. The nested Next.js project is an engineering reference.
+**Source and change.** GreenLight_Pay_Consumer_Starter.zip, November 24. Includes the AmountPad component from the original archive and the distinct simulated consumer and read-only wallet paths. The nested Next.js project is an engineering reference. Main website public-facing GLP integration screen recovered from potify-website at b40b28683e548a04619f1e018814dd91aec1256d. July reference server is a separate non-canonical historical project.
 
 **Observed result.** The fixture tests covered keypad entry, simulated purchases and sends, a balanced journal, duplicate confirmation prevention, mock wallets and source/embed parity.
 
