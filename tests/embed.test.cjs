@@ -1,0 +1,11 @@
+const fs=require('node:fs');
+const assert=require('node:assert/strict');
+const htmlPath=fs.existsSync('dist/index.html')?'dist/index.html':'GreenLight_Pay_Consumer_Demo.html';
+const html=fs.readFileSync(htmlPath,'utf8');
+const scripts=html.split('<script>');
+assert.equal(scripts.length,3,'expected consumer and wallet scripts');
+const embedded=scripts[2].split('</script>')[0].trim();
+assert.equal(embedded,fs.readFileSync('wallet-connection.js','utf8').trim(),'wallet source differs from shipped app');
+assert.match(html,/WALLET VIEW IS LIVE/);
+assert.match(html,/Payments, cash balances and shop are still simulated/);
+console.log('PASS: shipped HTML contains the tested wallet code and labels the simulated payment flows');

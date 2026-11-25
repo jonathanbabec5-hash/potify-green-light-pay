@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07140e"><title>Green Light Pay | Consumer sandbox</title>
+<style>
+:root{color-scheme:dark;--bg:#07130d;--panel:#11251a;--soft:#1a3323;--line:#294536;--green:#9cff57;--white:#f4fff6;--muted:#a5b9aa;--radius:22px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:#050b07;color:var(--white)}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #fff;outline-offset:3px}button:disabled{opacity:.43;cursor:not-allowed}.shell{width:min(100%,480px);min-height:100dvh;margin:auto;background:radial-gradient(circle at 95% -10%,#1c4b2d,transparent 32%),var(--bg);padding:0 19px 105px;position:relative}.header{display:flex;justify-content:space-between;align-items:center;padding:21px 0 15px}.wordmark{font-weight:850;letter-spacing:-.04em;font-size:20px}.wordmark b{color:var(--green)}.mark{display:flex;gap:10px;align-items:center}.logo{height:34px;width:34px;border-radius:11px;background:var(--green);color:#07130d;display:grid;place-items:center;font-size:20px;font-weight:1000}.profile{border:1px solid var(--line);background:#15291d;border-radius:50%;height:42px;width:42px;font-weight:800}.notice{font-size:11px;line-height:1.4;color:#e1f8df;background:#163c23;border:1px solid #2c6740;border-radius:12px;padding:9px 12px;margin-bottom:14px}.eyebrow{color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:10px}.muted{color:var(--muted)}.small{font-size:12px;line-height:1.45}.tiny{font-size:11px}.space{height:14px}h1,h2,h3,p{margin:0}h1{font-size:26px;letter-spacing:-.04em}h2{font-size:21px;letter-spacing:-.03em}h3{font-size:15px}p{line-height:1.5}.row{display:flex;gap:10px;align-items:center}.between{display:flex;justify-content:space-between;align-items:center;gap:12px}.card{background:linear-gradient(140deg,#183724,#102117);border:1px solid var(--line);border-radius:var(--radius);padding:17px}.subcard{background:#0c1d13;border:1px solid var(--line);border-radius:16px;padding:13px}.button{border:0;border-radius:14px;background:var(--green);color:#07130d;font-weight:850;padding:14px 15px;min-height:48px}.button.secondary{color:var(--white);background:#203a29;border:1px solid #375a40}.button.ghost{background:transparent;color:var(--white);border:1px solid var(--line)}.button.danger{color:#ffddd6;background:#503029}.button.wide{width:100%}.round{border-radius:50%;height:43px;width:43px;border:1px solid var(--line);background:#11251a;font-size:19px}.caption{font-size:12px;color:var(--muted);line-height:1.45}.balance-line{font-weight:700;font-size:12px;color:#d4e4d5}.amountbox{text-align:center;padding:17px 0 3px}.amount{font-size:clamp(52px,14vw,76px);font-weight:850;letter-spacing:-.07em;line-height:1.08;font-variant-numeric:tabular-nums}.asset-select{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #365941;border-radius:999px;background:#172d1d;color:#eaffec;font-size:12px;font-weight:700}.asset-select select{color:var(--green);background:transparent;border:0;font-weight:800;max-width:105px}.keypad{width:min(100%,320px);margin:12px auto 10px;display:grid;grid-template-columns:repeat(3,1fr);gap:3px}.key{background:transparent;border:0;border-radius:17px;color:#f5fff5;font-size:27px;font-weight:600;min-height:57px}.key:active{background:#294932}.actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}.actions button{padding:12px 5px}.nav{position:fixed;z-index:3;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,480px);display:flex;justify-content:space-around;padding:9px 4px max(11px,env(safe-area-inset-bottom));border-top:1px solid #24392b;background:rgba(7,19,13,.97)}.nav button{border:0;background:transparent;color:#a5b9aa;display:grid;justify-items:center;gap:3px;font-size:10px;font-weight:700;min-width:58px;min-height:46px}.nav .active{color:var(--green)}.nav .ico{font-size:19px}.section-title{margin:7px 0 13px}.activity-item,.asset-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #254030}.activity-item:last-child,.asset-item:last-child{border-bottom:0}.glyph{width:43px;height:43px;border-radius:14px;background:#274a30;color:#c8ffc0;display:grid;place-items:center;font-weight:900}.status{color:#b9e9a5;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.product{display:flex;flex-direction:column;gap:8px}.product-art{height:96px;border-radius:14px;display:grid;place-items:center;background:radial-gradient(circle at 70% 20%,#416a39,#1a3522 66%);font-size:34px}.product p{min-height:32px}.form-label{font-size:12px;font-weight:750;color:#c7d9c9;display:block;margin:13px 0 6px}.field{width:100%;border:1px solid #3c5a42;border-radius:13px;background:#09170e;color:#fff;padding:13px;min-height:48px}.modal-backdrop{position:fixed;z-index:5;inset:0;background:rgba(0,0,0,.78);display:flex;align-items:flex-end;justify-content:center}.sheet{width:min(100%,480px);max-height:92dvh;overflow:auto;background:#102117;border:1px solid #375a40;border-radius:26px 26px 0 0;padding:18px 20px max(24px,env(safe-area-inset-bottom));box-shadow:0 -15px 50px #0009}.line{height:4px;width:38px;background:#52735a;border-radius:9px;margin:0 auto 18px}.sheet h2{margin-bottom:8px}.line-item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #2a4230;font-size:13px}.tag{font-size:10px;font-weight:850;color:var(--green);background:#25472c;border-radius:999px;padding:5px 8px}.error{color:#ffc0ae;font-size:12px;margin-top:8px;min-height:16px}.empty{padding:32px 10px;text-align:center;color:var(--muted);font-size:13px}.hero{margin:13px 0}.hero h2{max-width:250px;font-size:25px;line-height:1.1}.footer-note{padding:12px 2px;color:#9fb6a2;font-size:11px;line-height:1.45}.link{border:0;background:transparent;color:var(--green);padding:4px;font-weight:750}.qr{height:138px;width:138px;border:8px solid white;border-radius:9px;margin:15px auto;background:#fff;display:grid;place-items:center;color:#0d1b10;text-align:center;padding:8px;font-weight:800;font-size:12px}.code{font-family:ui-monospace,monospace;overflow-wrap:anywhere;color:#d3f1d6;font-size:12px}.hidden{display:none!important}
+@media(max-height:730px){.amount{font-size:54px}.amountbox{padding-top:5px}.key{min-height:48px}.keypad{margin:5px auto}.header{padding-top:13px}.notice{margin-bottom:8px}}@media(min-width:700px){.shell{box-shadow:0 0 80px #000;min-height:100vh}.nav{bottom:0}}
+.live-wallet-bar{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px;border-radius:14px;border:1px solid #477654;background:#16301e;color:#f2fff1;text-align:left;font-size:12px;min-height:49px;margin:0 0 12px}.live-wallet-bar strong{display:block;font-size:10px;letter-spacing:.09em;color:#a3f99a}.live-wallet-bar b{color:#b1ff7f}.wallet-overlay{z-index:9}
+</style>
+</head>
+<body><div class="shell"><header class="header"><div class="mark"><div class="logo" aria-hidden="true">↗</div><div class="wordmark">GREEN <b>LIGHT</b> PAY</div></div><button class="profile" id="about-btn" aria-label="About this sandbox">?</button></header><div class="notice"><b>WALLET VIEW IS LIVE</b> · Payments, cash balances and shop are still simulated. No funds move.</div><div id="live-wallet-hub" aria-live="polite"></div><main id="app" aria-live="polite"></main><nav class="nav" aria-label="Main navigation"><button data-page="home"><span class="ico">⌨</span>Pay</button><button data-page="activity"><span class="ico">◷</span>Activity</button><button data-page="shop"><span class="ico">◇</span>Shop</button><button data-page="wallet"><span class="ico">◫</span>Assets</button><button data-page="merchant"><span class="ico">▦</span>Merchant</button></nav></div><div id="modal-root"></div><div id="live-wallet-dialog"></div>
+<script>
+(()=>{'use strict';
+const KEY='glp-consumer-synthetic-v1';
+const ASSETS={USD:{name:'Cash',unit:'USD',div:100n,perCent:1n},USDC:{name:'USDC',unit:'USDC',div:1000000n,perCent:10000n},SOL:{name:'Solana',unit:'SOL',div:1000000000n,perCent:100000n},POTIFY:{name:'$POTIFY',unit:'POTIFY',div:1000000n,perCent:10000000n}};
+const PRODUCTS=[{id:'tee',name:'POTIFY Field Tee',description:'Community merch concept',price:2800,icon:'✳'},{id:'notes',name:'The Soil Remembers',description:'Chronicle concept',price:1800,icon:'▤'},{id:'poster',name:'Seed to Smoke Print',description:'Art print concept',price:1500,icon:'◈'},{id:'record',name:'First Cycle Soundtrack',description:'Music concept',price:1200,icon:'♪'}];
+const DEFAULT={balances:{USD:'12500',USDC:'25000000',SOL:'500000000',POTIFY:'100000000000'},events:[],journal:[]};
+let state;try{state=JSON.parse(localStorage.getItem(KEY)||'null')||structuredClone(DEFAULT);if(!state.balances||!Array.isArray(state.events)||!Array.isArray(state.journal))throw Error('bad')}catch(e){state=JSON.parse(JSON.stringify(DEFAULT))}
+let page='home',asset='USD',digits='0',modal=null,activeOrder=null;
+const app=document.getElementById('app'), modalRoot=document.getElementById('modal-root');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}};
+const uid=()=>globalThis.crypto?.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2);
+function usd(c){let x=BigInt(c);return '$'+(x/100n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')+'.'+String(x%100n).padStart(2,'0')}
+function units(raw,key){let n=BigInt(raw),d=ASSETS[key].div,whole=(n/d).toString().replace(/\B(?=(\d{3})+(?!\d))/g,','),fraction=(n%d).toString().padStart(String(d).length-1,'0').replace(/0+$/,'');if(key==='USD')return usd(n);return whole+(fraction?'.'+fraction:'')+' '+ASSETS[key].unit}
+function amount(){return BigInt(digits||'0')}
+function setPage(next){page=next;modal=null;modalRoot.innerHTML='';render();window.scrollTo(0,0)}
+function nav(){document.querySelectorAll('[data-page]').forEach(x=>{let active=x.dataset.page===page;x.classList.toggle('active',active);if(active)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')})}
+function rowEvent(e){let icon=e.kind==='fund'?'↓':e.kind==='purchase'?'◇':'↗';let prefix=e.kind==='fund'?'+':'−';return `<div class="activity-item"><div class="row"><div class="glyph">${icon}</div><div><b>${esc(e.label)}</b><div class="caption">${esc(e.when)} · ${esc(e.asset)}</div></div></div><div style="text-align:right"><b>${prefix}${usd(e.cents)}</b><div class="status">Simulated</div></div></div>`}
+function home(){return `<section class="amountbox"><div class="eyebrow">Enter amount in USD</div><div class="amount" aria-label="Amount ${esc(usd(amount()))}">${usd(amount())}</div><div class="space"></div><label class="asset-select">PAY WITH <select id="asset" aria-label="Pay with asset">${Object.keys(ASSETS).map(k=>`<option value="${k}" ${k===asset?'selected':''}>${k==='POTIFY'?'$POTIFY':k}</option>`).join('')}</select></label><p class="caption" style="margin-top:8px">Demo balance: ${units(state.balances[asset],asset)}</p></section><div class="keypad" aria-label="Amount keypad">${['1','2','3','4','5','6','7','8','9','00','0','⌫'].map(k=>`<button class="key" data-key="${k}" aria-label="${k==='⌫'?'Delete last digit':k}">${k}</button>`).join('')}</div><div class="actions"><button class="button secondary" data-action="send">Send</button><button class="button" data-action="scan">Pay QR</button><button class="button secondary" data-page="shop">Buy</button></div><div class="space"></div><div class="between subcard"><div><b>Move at your own pace.</b><div class="caption">An easier way to explore Green Light Pay.</div></div><button class="link" data-page="wallet">Assets →</button></div><p class="footer-note">All exchange rates are fictional for this demonstration. $POTIFY functionality is a proposal that requires independent review.</p>`}
+function activity(){return `<div class="between section-title"><div><div class="eyebrow">Your activity</div><h1>Every move, clear.</h1></div><span class="tag">DEMO</span></div><div class="card">${state.events.length?state.events.map(rowEvent).join(''):'<div class="empty">Your simulated transfers and purchases will appear here.</div>'}</div><p class="footer-note">Entries are stored only in this browser. These are not blockchain confirmations or real receipts.</p><button class="button ghost wide" data-action="journal">View demo ledger</button>`}
+function shop(){return `<div class="section-title"><div class="eyebrow">A connected ecosystem</div><h1>Explore the shop.</h1><p class="caption">Fictional products and prices for the prototype.</p></div><div class="grid">${PRODUCTS.map(x=>`<article class="card product"><div class="product-art" aria-hidden="true">${x.icon}</div><h3>${esc(x.name)}</h3><p class="caption">${esc(x.description)}</p><div class="between"><b>${usd(x.price)}</b><button class="button" style="min-height:40px;padding:8px 11px" data-buy="${x.id}">Buy</button></div></article>`).join('')}</div><p class="footer-note">No inventory, Printify connection, order fulfillment or actual sale is represented.</p>`}
+function wallet(){return `<div class="section-title"><div class="eyebrow">Balances and funding</div><h1>Your assets.</h1></div><div class="card"><div class="between"><div><div class="caption">Demo cash balance</div><h1>${units(state.balances.USD,'USD')}</h1></div><div class="glyph">$</div></div><div class="space"></div><button class="button wide" data-action="fund">Add demo cash</button></div><div class="space"></div><div class="card">${Object.keys(ASSETS).map(k=>`<div class="asset-item"><div class="row"><div class="glyph">${k==='POTIFY'?'✳':k==='SOL'?'◎':k==='USDC'?'$':'◉'}</div><div><b>${ASSETS[k].name}</b><div class="caption">${k==='USD'?'Simulated provider balance':'Simulated asset'}</div></div></div><b>${units(state.balances[k],k)}</b></div>`).join('')}</div><p class="footer-note">Only the wallet panel above can display real on-chain balances. Bank, Apple Pay, card and ACH connections are not active. Fictional demo rates: 1 USDC = $1; 1 SOL = $100; 1 POTIFY = $0.001.</p>`}
+function merchant(){return `<div class="section-title"><div class="eyebrow">Merchant view</div><h1>Payment requests.</h1><p class="caption">A preview of the recovered counter → verification → receipt concept.</p></div><div class="card"><div class="between"><div><b>Demo merchant</b><div class="caption">Fictional shop · sandbox only</div></div><span class="tag">DEMO</span></div><div class="space"></div><div class="subcard"><div class="between"><span>Example request</span><b>$42.00</b></div><p class="caption">The merchant initiates the request; the customer reviews it before payment.</p></div><div class="space"></div><button class="button wide" data-action="merchant-request">Open example request</button></div><div class="space"></div><div class="card"><h3>Behind the receipt</h3><p class="caption">The planned GreenLight foundation connects the order, customer approval, independent verification, partner status and a balanced ledger. This screen does not verify any real payment.</p></div>`}
+function render(){nav();app.innerHTML=({home,activity,shop,wallet,merchant}[page]||home)();}
+function openSheet(title,body){modal=title;modalRoot.innerHTML=`<div class="modal-backdrop" data-dismiss="backdrop"><section class="sheet" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="line"></div><div class="between"><h2>${esc(title)}</h2><button class="round" data-action="close" aria-label="Close">×</button></div>${body}</section></div>`;modalRoot.querySelector('button,input,select')?.focus()}
+function close(){modal=null;modalRoot.innerHTML='';}
+function send(){if(amount()<=0n){openSheet('Enter an amount','<p class="caption">Choose an amount greater than zero on the keypad.</p>');return}openSheet('Send demo funds',`<p class="caption">A fictional peer transfer. No wallet or real account is used.</p><label class="form-label" for="recipient">Demo handle</label><input class="field" id="recipient" maxlength="40" placeholder="$friend" autocomplete="off"><div id="form-error" class="error"></div><div class="space"></div><button class="button wide" data-action="review-send">Review ${usd(amount())}</button>`)}
+function scan(){openSheet('Pay a QR request',`<p class="caption">Paste the sample code below or choose the example. Live camera scanning and real QR payments are not connected.</p><label class="form-label" for="qr-code">Demo request code</label><input class="field" id="qr-code" value="GLP-DEMO:4200" autocomplete="off"><div id="form-error" class="error"></div><div class="space"></div><button class="button wide" data-action="read-qr">Review demo request</button>`)}
+function fund(){openSheet('Add demo cash',`<p class="caption">This is a local simulation; it does not open Apple Pay or debit/ACH rails.</p><label class="form-label" for="fund-method">Simulated method</label><select class="field" id="fund-method"><option>Debit card</option><option>Apple Pay</option><option>ACH</option></select><label class="form-label" for="fund-amount">Amount</label><select class="field" id="fund-amount"><option value="2500">$25.00</option><option value="5000">$50.00</option><option value="10000">$100.00</option></select><div class="space"></div><button class="button wide" data-action="confirm-fund">Add fictional balance</button>`)}
+function review(kind,label,cents){let raw=BigInt(cents)*ASSETS[asset].perCent;activeOrder={id:uid(),kind,label,cents:String(cents),asset,raw:String(raw)};let enough=BigInt(state.balances[asset])>=raw;openSheet('Review demo payment',`<p class="caption">Review the fictional payment before updating this browser's demo balance.</p><div class="space"></div><div class="line-item"><span>To</span><b>${esc(label)}</b></div><div class="line-item"><span>Amount</span><b>${usd(cents)}</b></div><div class="line-item"><span>Pay with</span><b>${units(raw,asset)}</b></div><div class="line-item"><span>Network / processing fee</span><b>Not modeled</b></div><p class="footer-note">Fictional conversion rates. This does not sign, transfer, swap or settle real assets.</p>${enough?'':'<div class="error">Not enough demo balance for this payment. Choose another asset.</div>'}<button class="button wide" data-action="confirm-payment" ${enough?'':'disabled'}>Confirm simulation</button>`)}
+function commit(order){if(!order||state.events.some(e=>e.id===order.id))return false;let old=BigInt(state.balances[order.asset]),raw=BigInt(order.raw);if(raw<=0n||old<raw)return false;state.balances[order.asset]=(old-raw).toString();state.journal.unshift({id:order.id,asset:order.asset,entries:[{account:'consumer',delta:(-raw).toString()},{account:order.kind==='purchase'?'demo_merchant':'demo_recipient',delta:raw.toString()}]});state.events.unshift({...order,when:new Date().toLocaleString(),kind:order.kind});persist();activeOrder=null;return true}
+function fundCommit(cents,method){let n=BigInt(cents);if(n<=0n||n>10000n)return;let id=uid();state.balances.USD=(BigInt(state.balances.USD)+n).toString();state.journal.unshift({id,asset:'USD',entries:[{account:'demo_funding_provider',delta:(-n).toString()},{account:'consumer',delta:n.toString()}]});state.events.unshift({id,kind:'fund',label:'Demo '+method,cents:String(n),asset:'USD',when:new Date().toLocaleString()});persist();openSheet('Demo balance added',`<p class="caption">${usd(n)} was added to the fictional balance on this device. No money moved.</p><div class="space"></div><button class="button wide" data-page="wallet">See demo balance</button>`)}
+function about(){openSheet('About this sandbox',`<p>Green Light Pay is a proposed payment infrastructure concept. This local demonstration explores a consumer interface for the $POTIFY community.</p><div class="space"></div><p class="caption">The live wallet panel can connect to Phantom or Solflare and show on-chain balances. All cash balances, rates, transactions, merchants and purchases elsewhere in this demo are fictional. No live payment service is connected. Demo data stays in this browser until you reset it.</p><div class="space"></div><button class="button danger wide" data-action="reset">Reset demo data</button>`)}
+document.addEventListener('click',e=>{let el=e.target.closest('button,[data-dismiss]');if(!el)return;if(el.dataset.dismiss==='backdrop'&&e.target===el){close();return}if(el.dataset.page){setPage(el.dataset.page);return}if(el.dataset.key){let k=el.dataset.key;if(k==='⌫')digits=digits.length>1?digits.slice(0,-1):'0';else{let n=(digits==='0'?'':digits)+k;if(n.length<=9)digits=String(BigInt(n||'0'))}render();return}if(el.dataset.buy){let x=PRODUCTS.find(a=>a.id===el.dataset.buy);if(x)review('purchase',x.name,x.price);return}let a=el.dataset.action;if(el.id==='about-btn'){about();return}if(a==='close')close();if(a==='send')send();if(a==='scan')scan();if(a==='fund')fund();if(a==='merchant-request')openSheet('Merchant demo request',`<p class="caption">This is a demo code, not a live payment QR.</p><div class="qr">DEMO<br>REQUEST<br>$42.00</div><div class="code">GLP-DEMO:4200</div><div class="space"></div><button class="button wide" data-action="pay-example">Review example</button>`);if(a==='pay-example')review('purchase','Demo merchant',4200);if(a==='read-qr'){if(document.getElementById('qr-code').value.trim()!=='GLP-DEMO:4200'){document.getElementById('form-error').textContent='Only the sample code works in this sandbox.';return}review('purchase','Demo merchant',4200)}if(a==='review-send'){let v=document.getElementById('recipient').value.trim();if(!/^\$?[a-z0-9_]{2,30}$/i.test(v)){document.getElementById('form-error').textContent='Enter a 2–30 character demo handle.';return}review('send',v.startsWith('$')?v:'$'+v,amount())}if(a==='confirm-payment'){let o=activeOrder;if(commit(o)){openSheet('Simulation complete',`<p class="caption">${usd(o.cents)} was recorded as a fictional ${o.kind==='purchase'?'purchase':'transfer'}. No payment was sent.</p><div class="space"></div><button class="button wide" data-page="activity">View activity</button>`)}else{openSheet('Simulation not completed','<p class="caption">The balance changed or this action was already recorded. Review and try again.</p>')}}if(a==='confirm-fund')fundCommit(document.getElementById('fund-amount').value,document.getElementById('fund-method').value);if(a==='reset'){state=JSON.parse(JSON.stringify(DEFAULT));persist();digits='0';setPage('home')}if(a==='journal'){let valid=state.journal.every(j=>j.entries.reduce((sum,x)=>sum+BigInt(x.delta),0n)===0n);openSheet('Synthetic ledger',`<p class="caption">${state.journal.length} fictional entries; balanced: ${valid?'yes':'NO'}. Each action debits one demo account and credits another in the same asset.</p><div class="space"></div>${state.journal.slice(0,8).map(j=>`<div class="subcard small"><b>${esc(j.asset)}</b> · ${j.entries.map(x=>esc(x.account)+': '+esc(x.delta)).join(' / ')}</div><div class="space"></div>`).join('')||'<p class="caption">No demo entries yet.</p>'}`)}});
+document.addEventListener('change',e=>{if(e.target.id==='asset'&&ASSETS[e.target.value]){asset=e.target.value;render()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal)close();if(page==='home'&&!modal&&!document.querySelector('.wallet-overlay')&&!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)){let k=e.key==='Backspace'?'⌫':/^[0-9]$/.test(e.key)?e.key:null;if(k){e.preventDefault();document.querySelector(`[data-key="${k}"]`)?.click()}}});
+render();
+})();
+</script>
+<script>
+/* Green Light Pay: injected Phantom/Solflare connection and read-only balances.
+ * No wallet signature, transfer, swap, funding or payment is requested here.
+ * Balances come from the public Solana mainnet RPC and can be unavailable.
+ */
+(() => {
+  'use strict';
+  const RPC = 'https://api.mainnet.solana.com';
+  const MINTS = {
+    USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+    POTIFY: 'GWdHGomLjqofUSrj3TEhinr2UaRJMzJ5o7MRZLaFpump',
+  };
+  const TOKEN_PROGRAMS = new Set([
+    'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+    'TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb',
+  ]);
+  const hub = document.getElementById('live-wallet-hub');
+  const root = document.getElementById('live-wallet-dialog');
+  if (!hub || !root) return;
+  let current = null;
+  let generation = 0;
+  let modalOpen = false;
+  let rpcId = 0;
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const short = s => `${s.slice(0, 5)}…${s.slice(-5)}`;
+  const mobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent || '');
+
+  // Base58 string must decode to exactly 32 bytes, not just look plausible.
+  function validKey(value) {
+    if (typeof value !== 'string' || value.length < 32 || value.length > 44) return false;
+    const alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+    let n = 0n;
+    for (const char of value) {
+      const digit = alphabet.indexOf(char);
+      if (digit < 0) return false;
+      n = n * 58n + BigInt(digit);
+    }
+    let bytes = 0;
+    while (n > 0n) { bytes++; n >>= 8n; }
+    for (const char of value) { if (char !== '1') break; bytes++; }
+    return bytes === 32;
+  }
+  function providerFor(kind) {
+    if (kind === 'Phantom') {
+      const p = window.phantom?.solana || (window.solana?.isPhantom ? window.solana : null);
+      return p?.isPhantom && typeof p.connect === 'function' ? p : null;
+    }
+    const p = window.solflare || (window.solana?.isSolflare ? window.solana : null);
+    return p?.isSolflare && typeof p.connect === 'function' ? p : null;
+  }
+  function baseUrl() {
+    if (location.protocol !== 'https:') return null;
+    // Do not carry any query values or URL fragments into wallet redirects.
+    return location.origin + location.pathname;
+  }
+  function browseUrl(kind) {
+    const url = baseUrl();
+    if (!url) return null;
+    const route = kind === 'Phantom' ? 'https://phantom.com/ul/browse/' : 'https://solflare.com/ul/v1/browse/';
+    return route + encodeURIComponent(url) + '?ref=' + encodeURIComponent(location.origin);
+  }
+  function displayAmount(raw, decimals) {
+    const n = BigInt(raw);
+    const scale = 10n ** BigInt(decimals);
+    const whole = (n / scale).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    const fraction = decimals ? (n % scale).toString().padStart(decimals, '0').replace(/0+$/, '') : '';
+    return whole + (fraction ? '.' + fraction : '');
+  }
+  async function rpc(method, params) {
+    const id = ++rpcId;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 12000);
+    try {
+      const response = await fetch(RPC, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({jsonrpc:'2.0',id,method,params}), signal:controller.signal,
+        cache:'no-store', credentials:'omit', referrerPolicy:'no-referrer',
+      });
+      if (!response.ok) throw new Error(`RPC HTTP ${response.status}`);
+      const json = await response.json();
+      if (json.id !== id || json.error || !json.result) throw new Error('RPC response invalid');
+      return json.result;
+    } finally { clearTimeout(timer); }
+  }
+  async function solBalance(address) {
+    const result = await rpc('getBalance', [address, {commitment:'confirmed'}]);
+    if (!Number.isSafeInteger(result.value) || result.value < 0) throw new Error('SOL balance out of range');
+    return displayAmount(BigInt(result.value), 9) + ' SOL';
+  }
+  async function tokenBalance(address, mint, symbol) {
+    const result = await rpc('getTokenAccountsByOwner', [address, {mint}, {encoding:'jsonParsed',commitment:'confirmed'}]);
+    if (!Array.isArray(result.value)) throw new Error('Token accounts unavailable');
+    let total = 0n, decimals = null;
+    for (const entry of result.value) {
+      const account = entry?.account;
+      const info = account?.data?.parsed?.info;
+      const amount = info?.tokenAmount;
+      if (!TOKEN_PROGRAMS.has(account?.owner) || info?.owner !== address || info?.mint !== mint ||
+          !amount || typeof amount.amount !== 'string' || !/^[0-9]+$/.test(amount.amount) || !Number.isInteger(amount.decimals) ||
+          amount.decimals < 0 || amount.decimals > 18 || (decimals !== null && decimals !== amount.decimals)) {
+        throw new Error('Token account validation failed');
+      }
+      decimals = amount.decimals;
+      total += BigInt(amount.amount);
+    }
+    return (decimals === null ? '0' : displayAmount(total, decimals)) + ' ' + symbol;
+  }
+  function clearListeners(connection) {
+    if (!connection?.provider) return;
+    const remove = connection.provider.removeListener || connection.provider.off;
+    if (typeof remove === 'function') {
+      remove.call(connection.provider, 'accountChanged', connection.onAccount);
+      remove.call(connection.provider, 'disconnect', connection.onDisconnect);
+    }
+  }
+  function reset() {
+    generation++;
+    clearListeners(current);
+    current = null;
+    render();
+  }
+  async function refresh() {
+    if (!current) return;
+    const ticket = ++generation, connection = current, address = current.address;
+    current.loading = true;
+    current.balances = {SOL:'Loading…',USDC:'Loading…',POTIFY:'Loading…'};
+    current.message = '';
+    render();
+    const result = await Promise.allSettled([
+      solBalance(address), tokenBalance(address, MINTS.USDC, 'USDC'), tokenBalance(address, MINTS.POTIFY, '$POTIFY'),
+    ]);
+    if (generation !== ticket || current !== connection || current.address !== address) return;
+    const labels = ['SOL','USDC','POTIFY'];
+    labels.forEach((label, i) => { current.balances[label] = result[i].status === 'fulfilled' ? result[i].value : 'Unavailable'; });
+    current.loading = false;
+    if (result.some(r => r.status === 'rejected')) current.message = 'One or more balances could not load. The public Solana service may be busy; try refresh.';
+    render();
+  }
+  function modalMessage(text) {
+    const node = document.getElementById('wallet-message');
+    if (node) node.textContent = text;
+  }
+  async function connect(kind) {
+    if (current?.connecting) return;
+    const p = providerFor(kind);
+    if (!p) {
+      const url = browseUrl(kind);
+      if (mobile() && url) {
+        // This opens the current HTTPS app inside the chosen wallet; it does not
+        // request a signature or carry any key material in the URL.
+        window.location.assign(url);
+        return;
+      }
+      modalMessage(mobile() ? 'Open this app from an HTTPS link first, then use your wallet’s browser.' : `${kind} was not detected. Install or unlock it and try again.`);
+      return;
+    }
+    if (current) {
+      modalMessage('Disconnect the current wallet before connecting a different wallet.');
+      return;
+    }
+    const ticket = ++generation;
+    current = {kind,provider:p,connecting:true,address:null,loading:false,balances:{}};
+    render();
+    try {
+      const result = await p.connect();
+      if (ticket !== generation || current?.provider !== p) return;
+      const publicKey = result?.publicKey || p.publicKey;
+      const address = publicKey?.toString?.();
+      if (!validKey(address)) throw new Error('Wallet returned an invalid public address');
+      const connection = current;
+      connection.address = address;
+      connection.connecting = false;
+      connection.onAccount = key => {
+        if (current !== connection) return;
+        const next = key?.toString?.();
+        if (!next) { reset(); return; }
+        if (!validKey(next)) { reset(); return; }
+        connection.address = next;
+        refresh();
+      };
+      connection.onDisconnect = () => { if (current === connection) reset(); };
+      if (typeof p.on === 'function') {
+        p.on('accountChanged', connection.onAccount);
+        p.on('disconnect', connection.onDisconnect);
+      }
+      await refresh();
+    } catch (error) {
+      if (ticket !== generation) return;
+      reset();
+      modalOpen = true;
+      render();
+      modalMessage(error?.code === 4001 ? 'Connection was declined in your wallet.' : 'The wallet could not connect. Unlock it and try again.');
+    }
+  }
+  async function disconnect() {
+    const old = current;
+    reset();
+    // The wallet owns its own authorization; request disconnection but clear
+    // our local state even if the provider has already disconnected.
+    try { if (old?.provider && typeof old.provider.disconnect === 'function') await old.provider.disconnect(); } catch (_) {}
+  }
+  function render() {
+    const connected = current && !current.connecting && current.address;
+    hub.innerHTML = connected
+      ? `<button class="live-wallet-bar" data-live-action="details" aria-label="View connected wallet"><span><strong>LIVE WALLET</strong> ${esc(current.kind)} · ${esc(short(current.address))}</span><b>View</b></button>`
+      : `<button class="live-wallet-bar" data-live-action="details"><span><strong>LIVE WALLET</strong> ${current?.connecting ? 'Connecting…' : 'Connect Phantom or Solflare'}</span><b>${current?.connecting ? '…' : 'Connect'}</b></button>`;
+    if (!modalOpen) { root.innerHTML = ''; return; }
+    let content;
+    if (current?.connecting) {
+      content = '<p class="caption">Approve the connection in your wallet. No transaction or signature is requested.</p><p id="wallet-message" class="error" role="status"></p>';
+    } else if (!connected) {
+      content = `<p class="caption">Connect to view your public address and real Solana balances. Your wallet asks for permission; no transaction or signature is requested.</p><div class="space"></div><button class="button wide" data-live-action="connect-phantom">Connect Phantom</button><div class="space"></div><button class="button secondary wide" data-live-action="connect-solflare">Connect Solflare</button><p id="wallet-message" class="error" role="status"></p><p class="footer-note">On iPhone, use the link to open this page inside the wallet app. Your public address is sent to Solana’s public RPC to load balances. The payment, shop, and funding screens remain demonstrations.</p>`;
+    } else {
+      content = `<p class="caption">${esc(current.kind)} · Solana mainnet</p><div class="space"></div><div class="subcard"><div class="eyebrow">Public wallet address</div><p class="code">${esc(current.address)}</p></div><div class="space"></div><div class="card">${['SOL','USDC','POTIFY'].map(k=>`<div class="asset-item"><b>${k==='POTIFY'?'$POTIFY':k}</b><span>${esc(current.balances[k]||'Loading…')}</span></div>`).join('')}</div><p id="wallet-message" class="error" role="status">${esc(current.message||'')}</p><p class="footer-note">Real on-chain balances only. Demo cash and demo purchases below are separate and cannot move money.</p><div class="actions" style="grid-template-columns:1fr 1fr"><button class="button secondary" data-live-action="refresh" ${current.loading?'disabled':''}>Refresh</button><button class="button secondary" data-live-action="copy">Copy address</button></div><div class="space"></div><button class="button ghost wide" data-live-action="disconnect">Disconnect wallet</button>`;
+    }
+    root.innerHTML = `<div class="modal-backdrop wallet-overlay" data-live-action="backdrop"><section class="sheet" role="dialog" aria-modal="true" aria-label="Live wallet"><div class="line"></div><div class="between"><h2>Live wallet</h2><button class="round" data-live-action="close" aria-label="Close wallet dialog">×</button></div>${content}</section></div>`;
+  }
+  document.addEventListener('click', event => {
+    const target = event.target.closest('[data-live-action]');
+    if (!target) return;
+    const action = target.dataset.liveAction;
+    if (action === 'backdrop' && event.target !== target) return;
+    if (action === 'details') { modalOpen = true; render(); }
+    if (action === 'close' || action === 'backdrop') { modalOpen = false; render(); }
+    if (action === 'connect-phantom') connect('Phantom');
+    if (action === 'connect-solflare') connect('Solflare');
+    if (action === 'refresh') refresh();
+    if (action === 'disconnect') disconnect();
+    if (action === 'copy' && current?.address) {
+      navigator.clipboard?.writeText(current.address).then(() => modalMessage('Address copied.'), () => modalMessage('Unable to copy; select the public address above.'));
+      if (!navigator.clipboard) modalMessage('Unable to copy; select the public address above.');
+    }
+  });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && modalOpen) { modalOpen = false; render(); } });
+  render();
+})();
+
+</script></body></html>

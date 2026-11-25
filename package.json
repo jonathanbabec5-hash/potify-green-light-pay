@@ -1,0 +1,8 @@
+{
+  "name": "potify-green-light-pay",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "check:public": "node tests/demo.test.cjs && node tests/wallet.test.cjs && node tests/embed.test.cjs"
+  }
+}
