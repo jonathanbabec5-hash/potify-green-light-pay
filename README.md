@@ -2,6 +2,14 @@
 
 [Complete repository directory tree](docs/DIRECTORY.md)
 
+## Which balance did the receipt change?
+
+A shopper should be able to put a finger on the confirmation screen and say what moved. Green Light Pay Consumer gives a product team a fictional basket and a keypad so that question can be asked before anyone brings real money to the counter.
+
+Follow a simulated purchase in the [consumer demo](GreenLight_Pay_Consumer_Demo.html) beside the [journal checks](tests/demo.test.cjs). Separate what the keypad displays from the asset debited and the journal entries that must balance. A wallet balance read is another operation again.
+
+Try the same fictional confirmation twice and account for the resulting entries. Quote the label that made this clear or propose one better label. Provider clearance, settlement and custody remain unverified. Green Light Pay has separate finances, contracts and governance from POTIFY.
+
 **Working sandbox and reference source.** Let a shopper try a keypad, send to a handle and buy a sample item in one flow.
 
 ### Setup and usage
