@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07110d">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="A playable Green Light Pay initiative sandbox for a fictional cannabis retail workflow.">
+  <title>Green Light Pay Initiative — Playable Sandbox</title>
+  <meta name="glp-base" content="__GLP_BASE__">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="__GLP_BASE__/shared-nav.css">
+  <link rel="stylesheet" href="__GLP_BASE__/styles.css">
+  <link rel="icon" href="__GLP_BASE__/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#play-stage">Skip to the sandbox</a>
+  <div class="world" aria-hidden="true">
+    <div class="world-grid"></div>
+    <div class="world-glow world-glow-one"></div>
+    <div class="world-glow world-glow-two"></div>
+    <div class="world-orbit"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="__GLP_BASE__/" aria-label="Green Light Pay sandbox home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img" aria-labelledby="brand-svg-title">
+          <title id="brand-svg-title">Green Light Pay</title>
+          <path d="M13 10h22v28H13z"></path>
+          <path d="M18 17h12M18 24h12M18 31h7"></path>
+          <circle cx="34" cy="33" r="8"></circle>
+          <path d="m31 33 2 2 4-5"></path>
+        </svg>
+      </span>
+      <span class="brand-copy">
+        <strong>Green Light Pay <em>Initiative</em></strong>
+      </span>
+    </a>
+    <nav class="top-actions" aria-label="Sandbox navigation">
+      <button class="text-button" id="open-boundary" type="button">What’s real?</button>
+      <a class="developer-link" href="__GLP_BASE__/developer">Dev console</a>
+      <span class="sandbox-chip"><i aria-hidden="true"></i> Sandbox · Simulated · No live funds</span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="overline">Counter One · Sandbox</p>
+        <h1 id="hero-title">Put the counter <span>on green.</span></h1>
+        <p class="hero-lede">Initiate a fictional retail payment and play every handoff—from qualified partner to verified transaction to a reconciled record.</p>
+      </div>
+      <div class="hero-hud" aria-label="Sandbox readiness">
+        <div><i class="signal ready" aria-hidden="true"></i><span>Merchant</span><strong id="hud-merchant">Checking</strong></div>
+        <div><i class="signal ready" aria-hidden="true"></i><span>Partner</span><strong id="hud-partner">Checking</strong></div>
+        <div><i class="signal sandbox" aria-hidden="true"></i><span>Network</span><strong>Simulated</strong></div>
+      </div>
+    </section>
+
+    <section class="play-shell" aria-label="Green Light Pay playable sandbox">
+      <aside class="journey-panel">
+        <div class="journey-heading">
+          <span>THE GREEN RUN</span>
+          <strong id="run-progress">0 / 5</strong>
+        </div>
+        <ol class="journey" id="journey-list">
+          <li data-step="counter" class="current"><span>01</span><div><strong>Counter</strong><small>Initiate the request</small></div><i></i></li>
+          <li data-step="partner"><span>02</span><div><strong>Green Gate</strong><small>Qualified partner check</small></div><i></i></li>
+          <li data-step="wallet"><span>03</span><div><strong>Handoff</strong><small>Customer wallet signs</small></div><i></i></li>
+          <li data-step="verify"><span>04</span><div><strong>Watchers</strong><small>Independent verification</small></div><i></i></li>
+          <li data-step="receipt"><span>05</span><div><strong>Receipt</strong><small>Records reconciled</small></div><i></i></li>
+        </ol>
+      </aside>
+
+      <article class="game-card" id="play-stage" tabindex="-1">
+        <div class="game-card-top">
+          <div>
+            <p id="stage-kicker">Loading the counter</p>
+            <h2 id="stage-title">Preparing your run…</h2>
+          </div>
+          <div class="stage-status" id="stage-status"><i></i><span>Connecting</span></div>
+        </div>
+        <div class="stage-content" id="stage-content" aria-live="polite" aria-busy="true">
+          <div class="boot-sequence">
+            <span class="loader" aria-hidden="true"></span>
+            <p>Checking merchant, partner, controls, and records.</p>
+          </div>
+        </div>
+        <div class="game-card-bottom">
+          <div class="run-id"><span>RUN</span><code id="run-reference">NOT STARTED</code></div>
+          <button class="restart-button" id="restart-run" type="button" hidden>Restart run</button>
+        </div>
+      </article>
+    </section>
+
+    <details class="live-trace">
+      <summary>
+        <span><i aria-hidden="true"></i> Live technical trace</span>
+        <small>Open the “stats for nerds” only when you want them</small>
+      </summary>
+      <div class="trace-body">
+        <ol id="trace-events" aria-label="Current sandbox events"></ol>
+        <a href="__GLP_BASE__/developer">Open the full developer console <span aria-hidden="true">→</span></a>
+      </div>
+    </details>
+
+    <section class="promise-section" aria-labelledby="promise-title">
+      <div class="section-heading">
+        <p>What this run proves</p>
+        <h2 id="promise-title">The phrase becomes visible, one requirement at a time.</h2>
+      </div>
+      <div class="promise-grid">
+        <article><span>01</span><div class="promise-icon partner-icon" aria-hidden="true"></div><h3>Qualified partners</h3><p>The gate stays closed until the fictional partner record has the required scope and authority.</p></article>
+        <article><span>02</span><div class="promise-icon verify-icon" aria-hidden="true"></div><h3>Verified transactions</h3><p>Two independent observers must match the frozen amount, asset, destination, signature, and finality.</p></article>
+        <article><span>03</span><div class="promise-icon records-icon" aria-hidden="true"></div><h3>Clear records</h3><p>The POS, chain evidence, partner amount, and balanced operational ledger must reconcile.</p></article>
+        <article><span>04</span><div class="promise-icon controls-icon" aria-hidden="true"></div><h3>Merchant controls</h3><p>The merchant can pause requests and enforce counter, asset, transaction, daily, and finality rules.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="glp-footer-nav" aria-label="Site footer navigation">
+      <a href="__GLP_BASE__/">Merchant Sandbox</a>
+      <a href="__GLP_BASE__/checkout/">Checkout Demo</a>
+      <a href="__GLP_BASE__/developer">Developer Console</a>
+      <button class="glp-open-reg" type="button">Regulatory Status</button>
+    </nav>
+    <div class="glp-footer-separation">
+      <strong>Context and navigation only — not a shared product, platform, or affiliation:</strong>
+      <a href="https://potifywebsite.com/green-light-pay" target="_blank" rel="noopener noreferrer">Project Separation ↗</a>
+      <a href="https://potifywebsite.com/" target="_blank" rel="noopener noreferrer">POTIFY Home ↗</a>
+    </div>
+    <div>
+      <strong>Green Light Pay Initiative</strong>
+      <span>A sandboxed orchestration and verification layer for a fictional cannabis retail workflow.</span>
+    </div>
+    <p>Green Light Pay Initiative is an independent prototype. It has no integration with any token, token rewards, financing, governance, revenue sharing, holder benefits, or live payment service.</p>
+    <p>Sandbox data is temporary and resets when this deployment restarts.</p>
+  </footer>
+
+  <dialog id="wallet-dialog" class="wallet-dialog" aria-modal="true">
+    <div class="dialog-top">
+      <h2 class="dialog-heading">PARTNER WALLET · SIMULATION</h2>
+      <button type="button" data-close-dialog aria-label="Close wallet simulation">×</button>
+    </div>
+    <div id="wallet-dialog-body"></div>
+  </dialog>
+
+  <dialog id="boundary-dialog" class="boundary-dialog" aria-modal="true">
+    <div class="dialog-top">
+      <h2 class="dialog-heading">TRUTHFUL SANDBOX BOUNDARY</h2>
+      <button type="button" data-close-dialog aria-label="Close explanation">×</button>
+    </div>
+    <div class="boundary-dialog-body">
+      <p class="dialog-lede">This is a functioning workflow prototype—not a live payment product.</p>
+      <div class="truth-grid">
+        <div><span>Working now</span><p>Merchant limits, partner qualification gates, one-time handoff, state transitions, dual-observer verification, balanced records, reconciliation, and a tamper-evident audit chain.</p></div>
+        <div><span>Simulated now</span><p>The regulated partner, customer wallet signature, chain observers, asset transfer, and partner settlement record.</p></div>
+        <div><span>Blocked from live use</span><p>No provider, bank, state, federal, legal, or regulatory approval is represented. No real cannabis purchase or money moves here.</p></div>
+      </div>
+      <div class="dialog-glossary">
+        <h3 class="dialog-heading">KEY TERMS</h3>
+        <dl class="dialog-gloss-grid">
+          <div><dt>Sandbox</dt><dd>A complete working prototype with fictional records. No real money moves, no live wallets, no cannabis transaction.</dd></div>
+          <div><dt>Green Gate</dt><dd>The qualified-partner check. A specifically qualified fixture partner (within this sandbox) must authorize each payment before it can proceed to the customer handoff. No real-world licensure or approval is implied.</dd></div>
+          <div><dt>Watchers</dt><dd>Two independent observers that each read the same on-chain evidence and must agree on slot, signature, amount, and destination before verification passes.</dd></div>
+          <div><dt>Reconciliation</dt><dd>Four-way comparison of POS record, chain evidence, partner amount, and the operational ledger. All four must agree before the run closes.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="__GLP_BASE__/nav.js"></script>
+  <script type="module" src="__GLP_BASE__/app.js"></script>
+</body>
+</html>

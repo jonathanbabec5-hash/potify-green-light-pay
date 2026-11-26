@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1710">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="glp-base" content="__GLP_BASE__">
+  <title>Green Light Pay — Customer Sandbox Handoff</title>
+  <link rel="stylesheet" href="__GLP_BASE__/shared-nav.css">
+  <link rel="stylesheet" href="__GLP_BASE__/checkout.css">
+  <link rel="icon" href="__GLP_BASE__/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#checkout-content">Skip to checkout</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <header>
+    <a href="__GLP_BASE__/" class="checkout-brand" aria-label="Return to Green Light Pay sandbox">
+      <span aria-hidden="true">G</span>
+      <div><strong>Green Light Pay</strong></div>
+    </a>
+    <div class="sandbox-label"><i></i> Simulation · no live funds</div>
+  </header>
+
+  <main>
+    <section class="phone-shell" aria-labelledby="checkout-title">
+      <div class="phone-top"><span>ONE-TIME HANDOFF</span><span id="checkout-clock">—</span></div>
+      <div id="checkout-content" class="checkout-content" aria-live="polite" aria-busy="true">
+        <div class="checkout-loading"><i></i><p>Opening the exact sandbox request…</p></div>
+      </div>
+      <div class="phone-bottom"><i></i></div>
+    </section>
+    <p class="outside-note">This customer surface receives only an opaque request and transaction facts. It never asks for identity, medical details, products, seed phrases, or private keys.</p>
+    <p class="outside-note">Green Light Pay Initiative is an independent prototype. It has no integration with any token, token rewards, financing, governance, revenue sharing, holder benefits, or live payment service. All parties here are fictional.</p>
+    <p class="outside-note">Green Light Pay minimizes what it collects. This sandbox does not ask who you are or what you purchased. Your wallet activity and required merchant records may still be visible to other authorized systems or parties.</p>
+    <p class="outside-note">Sandbox data is temporary and resets when this deployment restarts.</p>
+  </main>
+
+  <footer class="glp-checkout-footer">
+    <nav class="glp-footer-nav" aria-label="Site footer navigation">
+      <a href="__GLP_BASE__/">Merchant Sandbox</a>
+      <a href="__GLP_BASE__/checkout/">Checkout Demo</a>
+      <a href="__GLP_BASE__/developer">Developer Console</a>
+      <button class="glp-open-reg" type="button">Regulatory Status</button>
+    </nav>
+    <div class="glp-footer-separation">
+      <strong>Context and navigation only — not a shared product, platform, or affiliation:</strong>
+      <a href="https://potifywebsite.com/green-light-pay" target="_blank" rel="noopener noreferrer">Project Separation ↗</a>
+      <a href="https://potifywebsite.com/" target="_blank" rel="noopener noreferrer">POTIFY Home ↗</a>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="__GLP_BASE__/nav.js"></script>
+  <script type="module" src="__GLP_BASE__/checkout.js"></script>
+</body>
+</html>

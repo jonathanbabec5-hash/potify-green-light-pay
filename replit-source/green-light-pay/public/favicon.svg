@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <title>Green Light Pay</title>
+  <rect width="48" height="48" rx="10" fill="#0a1f14"/>
+  <path d="M13 10h22v28H13z" fill="none" stroke="#91ff68" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M18 17h12M18 24h12M18 31h7" stroke="#91ff68" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="34" cy="33" r="8" fill="#91ff68"/>
+  <path d="m31 33 2 2 4-5" stroke="#0a1f14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

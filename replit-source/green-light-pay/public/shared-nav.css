@@ -1,0 +1,303 @@
+/* ─── Green Light Pay shared site navigation ─────────────────────────────── */
+/* Imported by all three GLP routes. No inline styles anywhere.                */
+
+/* ─── Site navigation bar ────────────────────────────────────────────────── */
+.glp-sitenav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  padding: env(safe-area-inset-top) max(1rem, env(safe-area-inset-left)) 0 max(1rem, env(safe-area-inset-left));
+  min-height: 40px;
+  background: #060e09;
+  border-bottom: 1px solid #1a2e20;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.glp-sitenav-left,
+.glp-sitenav-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+/* Base link/button style used on the sitenav bar */
+.glp-snl {
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #7aaa85;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+.glp-snl:hover {
+  background: #1a2e20;
+  color: #b4d4bc;
+  text-decoration: none;
+}
+.glp-snl[aria-current="page"] {
+  color: #e8f5eb;
+  background: #1a2e20;
+  font-weight: 600;
+}
+.glp-snl-reg {
+  border: 1px solid #2a4a35;
+}
+.glp-sitenav-ctx-label {
+  font-size: 0.63rem;
+  color: #3d6050;
+  padding: 0 0.375rem;
+  white-space: nowrap;
+}
+
+/* ─── Status strip ────────────────────────────────────────────────────────── */
+.glp-status-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.28rem max(1rem, env(safe-area-inset-right)) 0.28rem max(1rem, env(safe-area-inset-left));
+  background: #030a05;
+  border-bottom: 1px solid #0f1f14;
+  text-align: center;
+}
+.glp-status-strip span {
+  font-size: 0.63rem;
+  color: #4a7558;
+  line-height: 1.5;
+}
+
+/* ─── Regulatory status dialog ────────────────────────────────────────────── */
+.glp-reg-dialog {
+  background: #0d1f14;
+  color: #c8e0cc;
+  border: 1px solid #2a4a35;
+  border-radius: 8px;
+  padding: 0;
+  width: min(800px, 92vw);
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+.glp-reg-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+/* Apply flex layout only when the dialog is open (UA sets display:none otherwise) */
+.glp-reg-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+.glp-reg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid #2a4a35;
+  flex-shrink: 0;
+}
+.glp-reg-header h2 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #7aaa85;
+  margin: 0;
+  text-transform: uppercase;
+}
+.glp-reg-close {
+  background: none;
+  border: none;
+  color: #7aaa85;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.125rem 0.4rem;
+  border-radius: 4px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.glp-reg-close:hover {
+  background: #1a3822;
+}
+.glp-reg-body {
+  overflow-y: auto;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.glp-reg-lede {
+  font-size: 0.8rem;
+  color: #9ec9a6;
+  border-left: 3px solid #2a6a3a;
+  padding-left: 0.75rem;
+  margin: 0;
+  line-height: 1.6;
+}
+.glp-reg-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid #1a2e20;
+  padding-top: 1rem;
+}
+.glp-reg-section h3 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7aaa85;
+  margin: 0;
+}
+.glp-reg-section p {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: #b4d4bc;
+  margin: 0;
+}
+.glp-reg-cite {
+  font-size: 0.7rem;
+  color: #4a7558;
+  font-style: italic;
+}
+.glp-reg-disclaimer {
+  background: #060e09;
+  border: 1px solid #2a4a35;
+  border-radius: 6px;
+  padding: 1rem 1.125rem;
+}
+.glp-reg-disclaimer h3 {
+  color: #c89a6a;
+}
+.glp-reg-disclaimer p {
+  color: #c8bfb0;
+}
+
+/* ─── Shared footer nav (index and checkout pages) ────────────────────────── */
+.glp-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+.glp-footer-nav a,
+.glp-footer-nav button {
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: #7aaa85;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.375rem;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.glp-footer-nav a:hover,
+.glp-footer-nav button:hover {
+  text-decoration: underline;
+}
+.glp-footer-separation {
+  font-size: 0.68rem;
+  color: #3d6050;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.glp-footer-separation strong {
+  font-weight: 600;
+}
+.glp-footer-separation a {
+  color: #5a8a68;
+  text-decoration: none;
+}
+.glp-footer-separation a:hover {
+  text-decoration: underline;
+}
+
+/* Checkout route footer */
+.glp-checkout-footer {
+  padding: 1.5rem 1rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ─── Developer rail additions ────────────────────────────────────────────── */
+.rail-sitenav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+.rail-sitenav a,
+.rail-sitenav button {
+  font-family: inherit;
+  font-size: 0.6rem;
+  color: #4a6a55;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0.1rem 0;
+  line-height: 1.4;
+}
+.rail-sitenav a:hover,
+.rail-sitenav button:hover {
+  color: #7aaa85;
+  text-decoration: underline;
+}
+.rail-potify-note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #151f18;
+}
+.rail-potify-note span {
+  font-size: 0.55rem;
+  color: #334d3e;
+  line-height: 1.4;
+}
+.rail-potify-note a {
+  font-size: 0.6rem;
+  color: #4a6a55;
+  text-decoration: none;
+}
+.rail-potify-note a:hover {
+  color: #7aaa85;
+  text-decoration: underline;
+}
+
+/* Hide rail additions when rail is collapsed or in mobile bottom rail */
+.op-rail.collapsed .rail-sitenav,
+.op-rail.collapsed .rail-potify-note { display: none; }
+
+/* ─── Mobile ──────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .glp-sitenav {
+    padding: max(0.3rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right)) 0.3rem max(0.75rem, env(safe-area-inset-left));
+    min-height: auto;
+  }
+  .glp-sitenav-ctx-label {
+    display: none;
+  }
+  .glp-snl {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.375rem;
+  }
+  .glp-status-strip span {
+    font-size: 0.6rem;
+  }
+}

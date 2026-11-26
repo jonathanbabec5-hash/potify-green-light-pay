@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0f1e">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="GLP Operations Terminal — sandbox orchestration console. No live funds, no real cannabis transactions.">
+  <title>Operations — Green Light Pay Sandbox</title>
+  <meta name="glp-base" content="__GLP_BASE__">
+  <link rel="stylesheet" href="__GLP_BASE__/shared-nav.css">
+  <link rel="stylesheet" href="__GLP_BASE__/developer.css">
+</head>
+<body>
+  <!-- Skip navigation -->
+  <a class="skip-link" href="#workspace-root">Skip to main content</a>
+
+  <div class="app-shell">
+
+    <!-- Navigation rail (12 workspaces) -->
+    <nav class="op-rail" id="op-rail" aria-label="Operations workspaces">
+      <div class="rail-brand">
+        <span class="rail-logo-mark" aria-hidden="true">&gt;_</span>
+        <div class="rail-logo-text">
+          <strong>GLP Ops</strong>
+          <small>v0.1.3-stage1.3</small>
+        </div>
+      </div>
+
+      <ul class="rail-nav" role="list" aria-label="Workspace navigation">
+        <li>
+          <button type="button" class="rail-item" data-workspace="overview" aria-current="page">
+            <span class="rail-icon" aria-hidden="true">⊞</span>
+            <span class="rail-label">Overview</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="transactions" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">≡</span>
+            <span class="rail-label">Transactions</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="queues" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">◫</span>
+            <span class="rail-label">Review Queues</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="merchants" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">⊕</span>
+            <span class="rail-label">Merchants</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="partners" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">◈</span>
+            <span class="rail-label">Partners</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="verification" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">⊙</span>
+            <span class="rail-label">Verification</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="reconciliation" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">⊜</span>
+            <span class="rail-label">Reconciliation</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="ledger" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">⊟</span>
+            <span class="rail-label">Ledger</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="audit" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">⊛</span>
+            <span class="rail-label">Audit</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="api" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">⊲</span>
+            <span class="rail-label">API &amp; Events</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="health" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">◌</span>
+            <span class="rail-label">System Health</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="rail-item" data-workspace="terminal" aria-current="false">
+            <span class="rail-icon" aria-hidden="true">&gt;_</span>
+            <span class="rail-label">Command Terminal</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="rail-footer">
+        <div class="sandbox-badge-rail">SANDBOX · SIMULATED · NO LIVE FUNDS</div>
+        <p class="rail-data-notice">Sandbox data is temporary and resets when this deployment restarts.</p>
+        <nav class="rail-sitenav" aria-label="Site links">
+          <a href="__GLP_BASE__/">Counter ↗</a>
+          <a href="__GLP_BASE__/checkout/">Checkout ↗</a>
+          <button class="glp-open-reg" type="button">Regulatory Status</button>
+        </nav>
+        <div class="rail-potify-note">
+          <span>Context only — not a shared product or affiliation:</span>
+          <a href="https://potifywebsite.com/green-light-pay" target="_blank" rel="noopener noreferrer">Project Separation ↗</a>
+          <a href="https://potifywebsite.com/" target="_blank" rel="noopener noreferrer">POTIFY Home ↗</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main body: header + workspace root -->
+    <div class="op-body">
+      <header class="op-header" aria-label="Operations header">
+        <div class="op-header-left">
+          <button type="button" class="rail-toggle" id="rail-toggle"
+            aria-label="Toggle navigation rail" aria-expanded="true" aria-controls="op-rail">
+            &#9776;
+          </button>
+          <div class="sandbox-badge">SANDBOX — SIMULATED — NO LIVE FUNDS</div>
+        </div>
+        <div class="op-header-right">
+          <span class="stale-indicator" id="stale-indicator" aria-live="polite" aria-atomic="true"></span>
+          <button type="button" id="refresh-btn" class="refresh-btn" aria-label="Refresh all workspace data">
+            &#8635; Refresh
+          </button>
+          <a href="__GLP_BASE__/" class="header-link">Counter ↗</a>
+          <button type="button" class="palette-btn" id="palette-btn"
+            aria-label="Open command palette (Ctrl+K)" title="Ctrl+K or Cmd+K">
+            ⌘K
+          </button>
+        </div>
+      </header>
+
+      <!--
+        Workspace root — content rendered by developer.js.
+        Merchants workspace form labels (plain-language, for static discovery):
+        · Pause new requests (blocks new payment requests at the counter)
+        · Per-transaction limit (maximum single-transaction amount in USD)
+        · Daily limit (cumulative daily cap in USD)
+        · Required finality (FINALIZED or CONFIRMED commitment level)
+      -->
+      <main id="workspace-root" tabindex="-1" aria-label="Active workspace">
+        <div class="ws-loading">
+          <p>Loading GLP Operations&hellip;</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Command palette dialog -->
+  <div class="palette-overlay" id="palette-overlay"
+    role="dialog" aria-modal="true" aria-labelledby="palette-heading" hidden>
+    <div class="palette-modal">
+      <h2 class="sr-only" id="palette-heading">Command palette</h2>
+      <label for="palette-input" class="sr-only">Navigate to a workspace or find a transaction</label>
+      <input id="palette-input" type="search" autocomplete="off"
+        autocapitalize="none" spellcheck="false"
+        placeholder="Go to workspace or find a transaction…"
+        aria-label="Navigate to a workspace or find a transaction"
+        aria-controls="palette-results" aria-autocomplete="list">
+      <ul id="palette-results" role="listbox" aria-label="Palette suggestions"></ul>
+    </div>
+  </div>
+
+  <!-- Terminal input (used by JS and referenced by ui-contract test) -->
+  <!-- id="terminal-input" is rendered inside the Command Terminal workspace by developer.js -->
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Screen-reader announcer for workspace transitions -->
+  <div id="aria-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <script type="module" src="__GLP_BASE__/nav.js"></script>
+  <script type="module" src="__GLP_BASE__/developer.js"></script>
+</body>
+</html>
