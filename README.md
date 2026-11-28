@@ -1,5 +1,13 @@
 # Green Light Pay Consumer
 
+## Find your way in
+
+| If you are… | Start here | Try this |
+| --- | --- | --- |
+| A shopper or merchant | [Try the local consumer demo](#setup-and-usage) | Walk through a fictional basket and confirmation. |
+| A developer | [Inspect the demo checks](tests/demo.test.cjs) | Follow the journal entries and duplicate-confirmation behavior. |
+| A wallet builder | [Explore wallet connection](https://github.com/jonathanbabec5-hash/potify-glp-wallet-connect) | Review the separate balance-reading component and mock tests. |
+
 [Complete repository directory tree](docs/DIRECTORY.md)
 
 ## Which balance did the receipt change?
